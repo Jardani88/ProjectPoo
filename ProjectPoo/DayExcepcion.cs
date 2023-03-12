@@ -5,6 +5,7 @@ namespace ProjectPoo
     [Serializable]
     internal class DayExcepcion : Exception
     {
+
         public DayExcepcion()
         {
         }

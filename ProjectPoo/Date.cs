@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProjectPoo
+﻿namespace ProjectPoo
 {
     public class Date
     {
         private int _year;
         private int _month;
         private int _day;
-       
+
 
         public Date(int year, int month, int day)
         {
@@ -19,6 +13,7 @@ namespace ProjectPoo
             _month = CheckMont(month);
             _day = CheckDay(year, month, day);
         }
+
 
         private int CheckDay(int year, int month, int day)
         {
@@ -28,11 +23,11 @@ namespace ProjectPoo
             }
 
             int[] daysPerMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-            if(day >= 1 && day <= daysPerMonth[month])
+            if (day >= 1 && day <= daysPerMonth[month])
             {
                 return day;
             }
-            
+
             throw new DayExcepcion("Invalid day");
         }
 
@@ -66,8 +61,8 @@ namespace ProjectPoo
         private static int CheckMont(int month)
         {
             if (month >= 1 && month <= 12)
-            { 
-               return month;
+            {
+                return month;
             }
             throw new MontExeption("Invalid month");
         }
