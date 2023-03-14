@@ -1,14 +1,28 @@
 ﻿using ProjectPoo;
 
 Console.WriteLine("Primer Poo!");
-try
+Employee employee1 = new SalaryEmployee()
 {
-	Console.WriteLine(new Date(2021, 9, 29));
-	Console.WriteLine(new Date(2022, 5, 13));
-	Console.WriteLine(new Date(2024, 2, 29));
-}
-catch (Exception error)
+    Id = 1010,
+    FirstName = "sandra",
+    LastName = "Morales",
+    BirtDate = new Date(1990, 5, 23),
+    HiringDate = new Date(2022, 1, 15),
+    IsActive = true,
+    Salary = 1815453.45M
+
+
+};
+Console.WriteLine(employee1);
+Employee employee2 = new CommissionEmployee()
 {
-	Console.WriteLine(error.Message);
-	
-}
+    Id = 2020,
+    FirstName = "Tania",
+    LastName = "Villa",
+    BirtDate = new Date(1998, 7, 12),
+    HiringDate = new Date(2022, 2, 11),
+    IsActive = true,
+    Sales = 320000000M,
+    CommissionPercentaje = 0.03F
+};
+Console.WriteLine(employee2);
